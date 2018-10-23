@@ -8,7 +8,6 @@ import HomePage from './components/HomePage/HomePage';
 import Contact from './components/Contact/Contact';
 
 
-
 class App extends Component {
   render() {
     return (
