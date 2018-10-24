@@ -18,8 +18,13 @@ export default class HomePage extends Component {
       date: '',
       list: [],
       icon: '',
-      description: ''
+      description: '',
+      error: {
+        message: ''
+      }
     };
+
+    this.getData = this.getData.bind(this);
   }
 
   componentDidMount() {
@@ -40,7 +45,7 @@ export default class HomePage extends Component {
             if (index % 7 === 0) { return el; }
           }),
           icon: forecast.list[0].weather[0].icon,
-          description: (forecast.list[0].weather[0].main.toUpperCase()),
+          description: (forecast.list[0].weather[0].main.toUpperCase())
         })
       );
   }
@@ -50,7 +55,7 @@ export default class HomePage extends Component {
       <div>
 
         {/* TODO: Input city component */}
-        <InputLocation />
+        <InputLocation getData={this.getData} />
 
         <div className="forecast-table">
           <div className="container">
