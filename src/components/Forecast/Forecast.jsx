@@ -29,7 +29,7 @@ export default class Forecast extends Component {
           <div className="degree">
             <div className="num">{temperature}<sup>o</sup>C</div>
             <div className="forecast-icon">
-              <img src={`http://openweathermap.org/img/w/${icon}.png`} alt="weather-image" width="90" />
+              <img src={`http://openweathermap.org/img/w/${icon}.png`} alt="weather" width="90" />
             </div>
           </div>
           <span><img src="images/icon-cloudiness.png" alt="" />{cloudiness} %</span>

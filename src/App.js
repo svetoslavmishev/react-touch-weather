@@ -4,7 +4,7 @@ import './App.css';
 
 import Footer from './components/common/Footer/Footer';
 import Header from './components/common/Header/Header';
-import HomePage from './components/HomePage/HomePage';
+import Home from './components/Home/Home';
 import Contact from './components/Contact/Contact';
 
 
@@ -15,7 +15,7 @@ class App extends Component {
         <div className="site-content">
           <Header />
           <Switch>
-            <Route exact path="/" component={HomePage} />
+            <Route exact path="/" component={Home} />
             <Route path="/contact" component={Contact} />
           </Switch>
           <Footer />

@@ -27,6 +27,9 @@ export default class InputLocation extends Component {
     return (
       <div className="hero background-location" >
         <div className="container">
+          <div className="alert">
+            <strong>{this.props.error}</strong>
+          </div>
           <form className="find-location" onSubmit={this.onSubmit}>
             <input type="text" placeholder="Find your location..." value={this.state.cityName} onChange={this.onInputChange} />
             <input type="submit" value="Search" />
