@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
 export default class InputLocation extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
 
     this.state = {
       cityName: ''
@@ -27,11 +27,14 @@ export default class InputLocation extends Component {
     return (
       <div className="hero background-location" >
         <div className="container">
-          <div className="alert">
+          <div className="alert alert-danger">
             <strong>{this.props.error}</strong>
           </div>
           <form className="find-location" onSubmit={this.onSubmit}>
-            <input type="text" placeholder="Find your location..." value={this.state.cityName} onChange={this.onInputChange} />
+            <input type="text" placeholder="Find your location..."
+              value={this.state.cityName}
+              onChange={this.onInputChange}
+            />
             <input type="submit" value="Search" />
           </form>
         </div>
